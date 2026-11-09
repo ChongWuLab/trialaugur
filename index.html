@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=15">
-  <script src="js/config.js?v=15"></script>
+  <link rel="stylesheet" href="css/style.css?v=16">
+  <script src="js/config.js?v=16"></script>
 </head>
 <body data-page="home">
   <div id="site-header"></div>
@@ -31,20 +31,9 @@
   <section class="wrap section tight">
     <div class="sechead"><h2>How it works</h2></div>
     <div class="steps">
-      <div class="step"><div class="n">01</div><h3>Curate</h3><div class="who">TrialDossier, evidence agent</div>
-        <p>In stage 1, TrialDossier uses the NCT ID to retrieve and extract evidence from ClinicalTrials.gov, PubMed, Open
-          Targets, openFDA, prespecified web sources and company disclosures, organizing it into 28 fields. Stage 2
-          standardizes or condenses eight fields and retains the remaining 20 without semantic rewriting. Information that
-          cannot be retrieved is explicitly recorded as missing.</p></div>
-      <div class="step"><div class="n">02</div><h3>Forecast</h3><div class="who">TrialOutlook, prediction system</div>
-        <p>TrialOutlook supplies the dossier to a GPT-5 reasoning expert, prompted to estimate the probability that the
-          trial meets its prespecified primary endpoint and to update it with the dossier evidence. A probability of at
-          least 0.5 is a prediction of success.</p></div>
-      <div class="step"><div class="n">03</div><h3>Adjudicate</h3><div class="who">Prespecified outcome criteria</div>
-        <p>Success requires evidence that the prespecified primary endpoint was met, from an explicit statement in the
-          outcome disclosure or, when none is available, by comparing the reported results with the primary endpoint
-          registered on ClinicalTrials.gov. Failure requires evidence of a missed primary endpoint or trial discontinuation
-          without reported attainment of the primary endpoint. Otherwise the outcome remains unresolved.</p></div>
+      <div class="step"><div class="n">01</div><h3>Curate</h3></div>
+      <div class="step"><div class="n">02</div><h3>Forecast</h3></div>
+      <div class="step"><div class="n">03</div><h3>Adjudicate</h3></div>
     </div>
   </section>
 
@@ -60,7 +49,7 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/common.js?v=15"></script>
-  <script src="js/home.js?v=15"></script>
+  <script src="js/common.js?v=16"></script>
+  <script src="js/home.js?v=16"></script>
 </body>
 </html>

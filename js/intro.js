@@ -47,7 +47,7 @@
   if ('IntersectionObserver' in window) {
     new IntersectionObserver((es) => es.forEach((en) => {
       if (!v.muted || userPaused || v.ended) return;
-      if (en.intersectionRatio < 0.25) v.pause(); else if (v.paused && v.currentTime > 0) v.play().catch(() => {});
+      if (en.intersectionRatio < 0.25) v.pause(); else if (v.paused) v.play().catch(() => {});
     }), { threshold: [0, 0.25, 0.5] }).observe(v);
   }
 

@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
-  <script src="js/config.js?v=11"></script>
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <script src="js/config.js?v=13"></script>
 </head>
 <body data-page="contribute">
   <div id="site-header"></div>
@@ -50,13 +50,19 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
       </ul>
 
       <h2>How outcomes are labelled</h2>
-      <p>A trial is a <b>success</b> when the disclosure explicitly reports that the prespecified primary endpoint was met,
-        or clearly announces the start of the next development phase. A missed primary endpoint is a <b>failure</b> unless
-        the sponsor explicitly announces the start of the next phase; general development plans, intentions to discuss
-        development with regulators and conditional statements do not count as advancement. Unacceptable safety or
-        tolerability and discontinuation of the trial are also failures. Disclosures that support neither label stay
-        <b>unresolved</b> and are not scored. Every label links its primary source, and sponsor framing does not change
-        the label.</p>
+      <p>Trials are classified as a <b>success</b> or a <b>failure</b> according to whether the reported results satisfy
+        the prespecified criteria for the primary endpoints. Explicit statements of primary endpoint attainment or failure
+        in the readout are used when consistent with the trial's prespecified design. When such statements are absent or
+        ambiguous, the reported results are compared with the primary endpoints documented in ClinicalTrials.gov. Trials
+        terminated before completion are failures, unless attainment of the prespecified primary endpoint has been
+        reported.</p>
+      <p>For trials with multiple primary endpoints, adjudication follows the prespecified criteria for overall trial
+        success: trials requiring all coprimary endpoints to be met are failures if any required endpoint failed, and
+        trials permitting success on a subset of primary endpoints are evaluated according to their prespecified
+        multiplicity adjusted testing strategy. A trial stays <b>unresolved</b>, and is not scored, when the available
+        results or prespecified decision criteria are insufficient to determine whether the primary endpoints were met,
+        or when conflicting information cannot be resolved. Every label links its primary source, and the same rules
+        apply regardless of how a sponsor frames the disclosure.</p>
 
       <h2>Scoring</h2>
       <ul>
@@ -65,9 +71,10 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
           classified as failures</li>
         <li><b>Brier score and expected calibration error</b> for probability forecasts</li>
       </ul>
-      <p>Methods are compared on shared eligible trials, with uncertainty estimates, forecast coverage and the numbers of
-        adjudicated, unresolved and pending trials. TrialAugur's recorded forecasts are scored under the same rules; see
-        the <a href="results.html">Results</a> page for the initial prospective comparison.</p>
+      <p>Submitted methods and TrialOutlook are compared on shared eligible trials, with uncertainty estimates, forecast
+        coverage and the numbers of adjudicated, unresolved and pending trials. TrialOutlook's recorded forecasts are scored
+        under the same rules; the <a href="results.html">Results</a> page lists the adjudicated readouts of the initial
+        prospective cohort.</p>
 
       <h2>How to submit</h2>
       <ul>
@@ -84,7 +91,7 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/common.js?v=11"></script>
+  <script src="js/common.js?v=13"></script>
   <script>
     if (window.SITE.contactEmail) {
       document.getElementById("contact-line").insertAdjacentHTML("beforeend",

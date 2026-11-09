@@ -28,7 +28,7 @@ window.SITE = {
   // -------- Paper (PLACEHOLDER — replace when public) --------
   paper: {
     status: "placeholder", // set to "published" once citation/url are real
-    citation: "TrialCurator and TrialAugur: evidence dossiers and forecasts of clinical trial outcomes. " +
+    citation: "An AI system and live benchmark for prospective clinical trial forecasting. " +
               "Manuscript in preparation, 2026.",
     url: "" // DOI or preprint link once available
   }

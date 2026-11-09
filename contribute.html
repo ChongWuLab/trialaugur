@@ -40,7 +40,7 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
       <h2>Rules</h2>
       <ul>
         <li><b>Record before readout.</b> Only forecasts submitted while a trial is still pending are scored for that trial.
-          The submission timestamp is the time the forecast was recorded; for pull requests this is the commit time.</li>
+          The submission timestamp is the time the forecast was recorded; for email submissions this is the time the email was received.</li>
         <li><b>No edits after readout.</b> You may update forecasts for pending trials; a trial's forecast is frozen at its
           last value before readout.</li>
         <li><b>Any evidence dated before readout is allowed.</b> Literature, registries, filings, web search: anything,
@@ -77,26 +77,12 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
         prospective cohort.</p>
 
       <h2>How to submit</h2>
-      <ul>
-        <li><b>Pull request (preferred):</b> add your CSV as <code>submissions/&lt;model_name&gt;.csv</code> in
-          <a data-site-link="repo" href="#" target="_blank" rel="noopener">the site repository</a>.</li>
-        <li><b>GitHub issue:</b> open an issue on <a data-site-link="issues" href="#" target="_blank" rel="noopener">the tracker</a>
-          with your CSV attached.</li>
-      </ul>
-
-      <h2>Questions and label disputes</h2>
-      <p id="contact-line">Open an issue on <a data-site-link="issues" href="#" target="_blank" rel="noopener">the tracker</a>.
-        Disputed labels are reviewed again against the linked evidence, and revisions are recorded.</p>
+      <p>Email your CSV to <a href="mailto:Jxu18@mdanderson.org">Jxu18@mdanderson.org</a> (preferred) or
+        <a href="mailto:Cwu18@mdanderson.org">Cwu18@mdanderson.org</a>.</p>
     </div>
   </section>
 
   <div id="site-footer"></div>
   <script src="js/common.js?v=13"></script>
-  <script>
-    if (window.SITE.contactEmail) {
-      document.getElementById("contact-line").insertAdjacentHTML("beforeend",
-        ` Or email <a href="mailto:${SITE.contactEmail}">${SITE.contactEmail}</a>.`);
-    }
-  </script>
 </body>
 </html>

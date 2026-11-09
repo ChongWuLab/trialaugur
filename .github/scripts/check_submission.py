@@ -8,7 +8,7 @@ import csv, io, os, re, sys, urllib.request
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-BENCH = os.path.join(ROOT, "downloads", "trialoutlook_benchmark_5809_trials.csv")
+BENCH = os.path.join(ROOT, "downloads", "trialoutlook_benchmark_5809_nct_ids.csv")
 OUT = os.path.join(ROOT, "check")
 MAX_BYTES = 10 * 1024 * 1024
 URL_RE = re.compile(r"https://github\.com/(?:user-attachments/files/\d+/[^\s)\]]+|[\w.-]+/[\w.-]+/files/\d+/[^\s)\]]+)")

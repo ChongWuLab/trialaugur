@@ -35,6 +35,7 @@ const pct1 = (a, b) => `${((100 * a) / b).toFixed(1)}%`;
     ["index.html", "home", "Overview"],
     ["results.html", "results", "Results"],
     ["benchmark.html", "benchmark", "Benchmark"],
+    ["preliminary.html", "preliminary", "Preliminary results"],
     ["contribute.html", "contribute", "Contribute"],
   ];
 
@@ -72,6 +73,7 @@ const pct1 = (a, b) => `${((100 * a) / b).toFixed(1)}%`;
     const kind = a.dataset.siteLink;
     if (kind === "repo") a.href = S.repoUrl;
     if (kind === "issues") a.href = S.repoUrl.replace(/\/$/, "") + "/issues";
+    if (kind === "submit") a.href = S.repoUrl.replace(/\/$/, "") + "/issues/new?template=forecast_submission.yml";
     if (kind === "base") a.href = S.baseUrl;
   });
 })();

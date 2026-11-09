@@ -16,7 +16,7 @@ A prospective benchmark for clinical trial outcome forecasts.
   has been reported; everything else stays unresolved. Every label links its primary source.
 
 The site publishes the 69 adjudicated readouts with their evidence and the reasoning expert's recorded forecasts, and
-the NCT IDs of the benchmark. Evidence dossiers, model inputs and the forecast values of the benchmark trials are not
+the benchmark trial list (NCT ID, company, phase, drug, drug targets and disease). Evidence dossiers, model inputs and the forecast values of the benchmark trials are not
 published.
 
 ## Repository layout
@@ -24,14 +24,15 @@ published.
 This repository contains only the static website (GitHub Pages, `main` branch root).
 
 ```
-index.html / results.html / benchmark.html / contribute.html
+index.html / results.html / benchmark.html / preliminary.html / contribute.html
 predictions.html  redirect to benchmark.html (old link)
 css/          styling
 js/config.js  deployment config: site name, domain, repo, paper (edit here only)
 js/           page logic
 data/         compact JSON consumed by the pages
 downloads/    the 69 adjudicated readouts (CSV) and the benchmark NCT IDs (CSV)
-submissions/  community forecast CSVs (via pull request)
+submissions/  accepted forecast CSVs, stored by the automatic check of the submission form
+.github/      submission issue form and the workflow that checks and stores submissions
 ```
 
 ## Citation

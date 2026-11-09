@@ -1,0 +1,52 @@
+name: Forecast submission
+description: Submit forecasts for pending trials of the 5,809 trial prospective benchmark.
+title: "Forecast submission: "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Forecasts are scored only for trials that were still pending when this submission was recorded.
+        The submission time is the time this issue is opened (or last edited). An automatic check replies within a few
+        minutes; accepted files are stored in the `submissions` folder of this repository with their recorded time.
+  - type: input
+    id: method
+    attributes:
+      label: Method name
+      description: Short stable name of your method; it must equal the model_name column of the CSV.
+      placeholder: my_model_v1
+    validations:
+      required: true
+  - type: input
+    id: team
+    attributes:
+      label: Team or affiliation
+      description: Optional.
+    validations:
+      required: false
+  - type: textarea
+    id: csv
+    attributes:
+      label: Forecasts CSV
+      description: |
+        Drag and drop your CSV file here (up to 10 MB), or paste the CSV text for a small file.
+        Columns: nct_id, p_success (0 to 1), model_name, generated_at (YYYY-MM-DD), one row per trial.
+      placeholder: |
+        nct_id,p_success,model_name,generated_at
+        NCT00223145,0.82,my_model_v1,2026-11-01
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Method description
+      description: Optional. Models, evidence sources and how the probabilities were produced.
+    validations:
+      required: false
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: The forecasts were produced before the readouts of the trials they cover and use only evidence available before those readouts.
+          required: true

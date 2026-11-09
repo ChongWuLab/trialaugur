@@ -1,0 +1,53 @@
+name: Forecast submission check
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: forecast-submissions
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the submitted forecasts
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          EVENT_ACTION: ${{ github.event.action }}
+          CREATED_AT: ${{ github.event.issue.created_at }}
+          UPDATED_AT: ${{ github.event.issue.updated_at }}
+        run: python .github/scripts/check_submission.py
+      - name: Reply on the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$NUMBER" --body-file check/comment.md
+          if [ "$(cat check/status)" = "accepted" ]; then
+            gh issue edit "$NUMBER" --add-label accepted --remove-label "needs fix" || true
+          else
+            gh issue edit "$NUMBER" --add-label "needs fix" --remove-label accepted || true
+          fi
+      - name: Store the accepted file
+        if: hashFiles('check/status') != ''
+        env:
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          if [ "$(cat check/status)" != "accepted" ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add submissions
+          git commit -m "Forecast submission from issue #$NUMBER"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done

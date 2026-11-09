@@ -339,11 +339,30 @@ ul.plain li:first-child { border-top: 0; }
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-radius: 999px; }
 .introbtn:hover { background: rgba(20, 20, 19, .8); }
 .introbtn svg { width: 18px; height: 18px; flex: none; }
-.introbtn.sound { left: 18px; bottom: 18px; font-size: 14px; padding: 9px 16px 9px 13px; }
+.introbtn.sound { left: 18px; top: 18px; font-size: 14px; padding: 9px 16px 9px 13px; }
 .introbtn.center { left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 17px; padding: 14px 26px 14px 20px; }
 .introbtn.center svg { width: 22px; height: 22px; }
 .introbtn[hidden] { display: none; }
-.introcap { margin: 12px 2px 0; font-size: 13.5px; color: var(--faint); }
+.introcap { margin: 0; font-size: 13.5px; color: var(--faint); }
+.introbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 20px; margin: 12px 2px 0; }
+.introspeed { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--faint); }
+.introspeed span { margin-right: 4px; }
+.introspeed button { font: inherit; font-size: 13px; cursor: pointer; padding: 4px 10px; border-radius: 999px;
+  border: 1px solid var(--line-strong); background: var(--card); color: var(--fg); }
+.introspeed button:hover { background: var(--sunk); }
+.introspeed button[aria-pressed="true"] { background: var(--fg); border-color: var(--fg); color: var(--bg); }
 @media (max-width: 720px) {
-  .introbtn.sound { left: 10px; top: 10px; bottom: auto; font-size: 13px; padding: 7px 12px 7px 10px; }
+  .introbtn.sound { left: 10px; top: 10px; font-size: 13px; padding: 7px 12px 7px 10px; }
 }
+
+/* ---------- benchmark trial list: phase tabs and column searches ---------- */
+.phasetabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.phasetabs button { font: inherit; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); color: var(--fg); }
+.phasetabs button span { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.phasetabs button:hover { background: var(--sunk); }
+.phasetabs button.on { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.phasetabs button.on span { color: inherit; opacity: .75; }
+.tabulator .tabulator-header .tabulator-col .tabulator-header-filter input { font: inherit; font-size: 13px; font-weight: 400;
+  text-transform: none; letter-spacing: 0; padding: 6px 8px; border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--bg); color: var(--fg); width: 100%; box-sizing: border-box; }

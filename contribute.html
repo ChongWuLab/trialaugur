@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=17">
-  <script src="js/config.js?v=17"></script>
+  <link rel="stylesheet" href="css/style.css?v=21">
+  <script src="js/config.js?v=21"></script>
 </head>
 <body data-page="contribute">
   <div id="site-header"></div>
@@ -17,8 +17,14 @@
   <section class="wrap pagehead">
     <div class="eyebrow">Open benchmark</div>
     <h1>Submit your forecasts</h1>
-    <p class="lede">Email your CSV to <a href="mailto:Jxu18@mdanderson.org">Jxu18@mdanderson.org</a> (preferred) or
-      <a href="mailto:Cwu18@mdanderson.org">Cwu18@mdanderson.org</a>.</p>
+    <p class="lede">Submit your CSV through the submission form. An automatic check validates the file within a few
+      minutes, records the submission time and stores accepted forecasts in the public repository.</p>
+    <div class="btns">
+      <a class="btn primary" data-site-link="submit" href="#" target="_blank" rel="noopener">Open the submission form</a>
+      <a class="btn ghost" href="downloads/trialoutlook_benchmark_5809_trials.csv" download>Download the trial list (CSV)</a>
+    </div>
+    <p class="note">The form is a GitHub issue form, so a free GitHub account is needed. Attach the CSV by dragging it into
+      the form; the reply on the issue says whether it was accepted and, if not, what to fix.</p>
   </section>
 
   <section class="wrap">
@@ -29,7 +35,7 @@
         <tr><th>Column</th><th>Type</th><th>Description</th></tr>
         <tr><td><code>nct_id</code></td><td>string</td><td>Trial identifier from the <a href="benchmark.html">benchmark list</a>, for example NCT00223145</td></tr>
         <tr><td><code>p_success</code></td><td>float, 0 to 1</td><td>Predicted probability that the trial reads out as a success</td></tr>
-        <tr><td><code>model_name</code></td><td>string</td><td>Short stable name for your method (also the file name)</td></tr>
+        <tr><td><code>model_name</code></td><td>string</td><td>Short stable name for your method, the same in every row and in the form</td></tr>
         <tr><td><code>generated_at</code></td><td>ISO date</td><td>When the forecasts were produced</td></tr>
       </table></div>
       <pre>nct_id,p_success,model_name,generated_at
@@ -39,7 +45,7 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
       <h2>Rules</h2>
       <ul>
         <li><b>Record before readout.</b> Only forecasts submitted while a trial is still pending are scored for that trial.
-          The submission timestamp is the time the forecast was recorded; for email submissions this is the time the email was received.</li>
+          The submission time is the time the submission form (a GitHub issue) was opened, or last edited, as recorded by GitHub.</li>
         <li><b>No edits after readout.</b> You may update forecasts for pending trials; a trial's forecast is frozen at its
           last value before readout.</li>
         <li><b>Any evidence dated before readout is allowed.</b> Literature, registries, filings, web search: anything,
@@ -67,6 +73,6 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/common.js?v=17"></script>
+  <script src="js/common.js?v=21"></script>
 </body>
 </html>

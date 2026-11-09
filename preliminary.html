@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preliminary results · TrialOutlook</title>
+  <meta name="description" content="Preliminary results of the 5,809 trial prospective benchmark, released on the last day of each month.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z' fill='%23C96442'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=21">
+  <script src="js/config.js?v=21"></script>
+</head>
+<body data-page="preliminary">
+  <div id="site-header"></div>
+
+  <section class="wrap pagehead">
+    <div class="eyebrow">Prospective benchmark</div>
+    <h1>Preliminary results</h1>
+    <p class="lede">Benchmark results are released in installments on the last day of each month. The first installment
+      will be posted on 30 November 2026; each later release adds the benchmark trials whose outcomes were adjudicated
+      since the previous one.</p>
+  </section>
+
+  <section class="wrap section tight">
+    <div class="grid2">
+      <div class="card">
+        <h3>Release schedule</h3>
+        <ul class="plain">
+          <li><b>First installment.</b> 30 November 2026.</li>
+          <li><b>Later installments.</b> The last day of each month.</li>
+          <li><b>Forecasts.</b> The forecasts recorded before outcome disclosure stay fixed; each installment scores them on
+            the outcomes adjudicated so far.</li>
+          <li><b>Outcomes.</b> Adjudicated under the criteria on the <a href="contribute.html">Contribute</a> page, each with
+            its primary source; disclosures that support neither label stay unresolved.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What each installment reports</h3>
+        <ul class="plain">
+          <li>Numbers of adjudicated, unresolved and pending trials, overall and by phase.</li>
+          <li>ROC AUC and average precision, with success as the positive class.</li>
+          <li>Classification errors at 0.5: failures identified and successful trials classified as failures.</li>
+          <li>Brier score and expected calibration error for probability forecasts.</li>
+          <li>Uncertainty estimates and forecast coverage for TrialOutlook and for every submitted method, compared on shared
+            eligible trials.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">The <a href="results.html">Results</a> page lists the 69 adjudicated readouts of the initial prospective
+      cohort. To be scored in an installment, forecasts must be submitted while the trials are pending; see
+      <a href="contribute.html">Contribute</a>.</p>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/common.js?v=21"></script>
+</body>
+</html>

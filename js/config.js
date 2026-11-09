@@ -14,10 +14,10 @@ window.SITE = {
 
   // Public origin of this deployment (no trailing slash). Used only for the
   // citation box and canonical links — all internal links are relative.
-  baseUrl: "https://jayxu7777.github.io/trialaugur",
+  baseUrl: "https://chongwulab.github.io/trialaugur",
 
   // GitHub repository of this site (submissions and issues go here).
-  repoUrl: "https://github.com/jayxu7777/trialaugur",
+  repoUrl: "https://github.com/ChongWuLab/trialaugur",
 
   // Optional contact e-mail shown on the Contribute page. Leave "" to hide.
   contactEmail: "",

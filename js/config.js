@@ -1,5 +1,5 @@
 // ============================================================================
-// TrialAugur — site configuration
+// TrialOutlook: site configuration
 // Everything that identifies this deployment lives HERE and only here.
 //
 // To change the domain later:
@@ -9,7 +9,7 @@
 // Nothing else in the site references an absolute URL.
 // ============================================================================
 window.SITE = {
-  name: "TrialAugur",
+  name: "TrialOutlook",
   tagline: "Prospective benchmark for clinical trial outcome forecasts",
 
   // Public origin of this deployment (no trailing slash). Used only for the

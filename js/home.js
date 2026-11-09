@@ -1,4 +1,4 @@
-// TrialAugur home: example readout, paper box.
+// TrialOutlook home: example readout, paper box.
 
 (async function () {
   const S = window.SITE;

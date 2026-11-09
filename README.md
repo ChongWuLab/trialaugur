@@ -1,4 +1,4 @@
-# TrialAugur
+# TrialOutlook
 
 A prospective benchmark for clinical trial outcome forecasts.
 

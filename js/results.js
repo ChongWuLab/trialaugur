@@ -1,4 +1,4 @@
-// TrialAugur results: the readout ledger of the adjudicated prospective trials with the reasoning expert's forecast.
+// TrialOutlook results: the readout ledger of the adjudicated prospective trials with the reasoning expert's forecast.
 
 (async function () {
   const rows = await loadJSON("data/readouts.json");

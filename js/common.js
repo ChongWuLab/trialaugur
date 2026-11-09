@@ -1,4 +1,4 @@
-// TrialAugur: shared helpers, header and footer. Loaded at the end of <body>.
+// TrialOutlook: shared helpers, header and footer. Loaded at the end of <body>.
 
 const MARK = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#C96442"/></svg>`;
 

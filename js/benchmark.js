@@ -1,4 +1,4 @@
-// TrialAugur benchmark: the NCT IDs of the prospective benchmark cohort, searchable.
+// TrialOutlook benchmark: the NCT IDs of the prospective benchmark cohort, searchable.
 
 (async function () {
   const B = await loadJSON("data/benchmark.json");

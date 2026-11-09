@@ -1,4 +1,4 @@
-// TrialAugur home: example readout, stat strip, framing callout, paper box.
+// TrialAugur home: example readout, stat strip, paper box.
 
 (async function () {
   const S = window.SITE;
@@ -38,19 +38,4 @@
       </div>
       <div class="foot">${esc(c.evidence)}. <a href="${esc(c.url)}" target="_blank" rel="noopener">Source ↗</a></div>`;
   }
-
-  // framing callout (Fig. 2e of the manuscript)
-  const F = R.framing;
-  document.getElementById("fr-big").firstChild.textContent = pct1(F.positive, F.n);
-  document.getElementById("fr-small").textContent = `of ${F.n} unsuccessful trials were disclosed with positive framing`;
-  const pat = F.patterns.map((d) => `${d.label.toLowerCase()} (${d.n})`);
-  document.getElementById("fr-text").textContent =
-    `Among ${F.n} trials classified as unsuccessful with readouts between ${F.window}, the sponsor disclosures were ` +
-    `positively framed in ${F.positive} (${pct1(F.positive, F.n)}), negatively framed in ${F.negative} ` +
-    `(${pct1(F.negative, F.n)}) and neutral in ${F.neutral} (${pct1(F.neutral, F.n)}), judged by whether the dominant ` +
-    `message of the title, subtitle and conclusion was favorable. The positively framed disclosures showed these patterns: ` +
-    `${pat.join(", ")}. For example, the sponsor of a phase 2b trial of zelicapavir in high risk adults with respiratory ` +
-    `syncytial virus infection (NCT05568706) described the findings as “positive topline results” in the press release ` +
-    `headline and highlighted a subgroup benefit, while disclosing the absence of a treatment effect on the primary ` +
-    `endpoint only in the body of the release.`;
 })();

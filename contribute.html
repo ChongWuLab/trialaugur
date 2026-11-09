@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=13">
-  <script src="js/config.js?v=13"></script>
+  <link rel="stylesheet" href="css/style.css?v=14">
+  <script src="js/config.js?v=14"></script>
 </head>
 <body data-page="contribute">
   <div id="site-header"></div>
@@ -17,13 +17,14 @@
   <section class="wrap pagehead">
     <div class="eyebrow">Open benchmark</div>
     <h1>Submit your forecasts</h1>
-    <p class="lede">Every question here is a future trial readout, so the answer cannot be in any training set.
-      Forecast any of the <a href="benchmark.html">5,809 benchmark trials</a> while it is pending. Outcomes are
-      adjudicated under the rules below, and each method is scored on the trials it forecast before their readouts.</p>
   </section>
 
   <section class="wrap">
     <div class="doc">
+      <h2>How to submit</h2>
+      <p>Email your CSV to <a href="mailto:Jxu18@mdanderson.org">Jxu18@mdanderson.org</a> (preferred) or
+        <a href="mailto:Cwu18@mdanderson.org">Cwu18@mdanderson.org</a>.</p>
+
       <h2>What to submit</h2>
       <p>One CSV per model, one row per trial you want scored.</p>
       <div class="scroll"><table class="t">
@@ -64,25 +65,10 @@ NCT00223171,0.44,my_model_v1,2026-11-01</pre>
         or when conflicting information cannot be resolved. Every label links its primary source, and the same rules
         apply regardless of how a sponsor frames the disclosure.</p>
 
-      <h2>Scoring</h2>
-      <ul>
-        <li><b>ROC AUC and average precision (AP)</b>, with success as the positive class</li>
-        <li><b>Classification errors at 0.5</b>: failures identified (specificity and NPV) and successful trials
-          classified as failures</li>
-        <li><b>Brier score and expected calibration error</b> for probability forecasts</li>
-      </ul>
-      <p>Submitted methods and TrialOutlook are compared on shared eligible trials, with uncertainty estimates, forecast
-        coverage and the numbers of adjudicated, unresolved and pending trials. TrialOutlook's recorded forecasts are scored
-        under the same rules; the <a href="results.html">Results</a> page lists the adjudicated readouts of the initial
-        prospective cohort.</p>
-
-      <h2>How to submit</h2>
-      <p>Email your CSV to <a href="mailto:Jxu18@mdanderson.org">Jxu18@mdanderson.org</a> (preferred) or
-        <a href="mailto:Cwu18@mdanderson.org">Cwu18@mdanderson.org</a>.</p>
     </div>
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/common.js?v=13"></script>
+  <script src="js/common.js?v=14"></script>
 </body>
 </html>

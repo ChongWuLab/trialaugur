@@ -1,14 +1,7 @@
 // TrialAugur results: the readout ledger of the adjudicated prospective trials with the reasoning expert's forecast.
 
 (async function () {
-  const [R, rows] = await Promise.all([loadJSON("data/results.json"), loadJSON("data/readouts.json")]);
-  const P = R.prospective;
-
-  document.getElementById("lede").textContent =
-    `Forecasts of the reasoning expert were recorded on ${fmtDate(P.recorded)} for the initial prospective cohort of ` +
-    `${P.cohort} trials. By ${fmtDate(R.as_of)}, results had been reported for ${P.reported} trials after that date; ` +
-    `${P.n} were adjudicated under prespecified outcome criteria (${P.nS} successes and ${P.nF} failures) and ` +
-    `${P.unresolved} remained unresolved. Each row gives the evidence for the label, its primary source and the forecast.`;
+  const rows = await loadJSON("data/readouts.json");
 
   function scoreFmt(c) {
     const v = c.getValue(); if (v == null) return "";

@@ -1,4 +1,4 @@
-# TrialOutlook
+# TrialOutlook: Trial Outcome Live Benchmark
 
 A prospective benchmark for clinical trial outcome forecasts.
 

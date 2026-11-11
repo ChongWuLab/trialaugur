@@ -17,7 +17,7 @@ window.SITE = {
   baseUrl: "https://trialoutlook.com",
 
   // GitHub repository of this site (submissions and issues go here).
-  repoUrl: "https://github.com/ChongWuLab/trialaugur",
+  repoUrl: "https://github.com/ChongWuLab/trialoutlook",
 
   // Optional contact e-mail shown on the Contribute page. Leave "" to hide.
   contactEmail: "",

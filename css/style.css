@@ -366,3 +366,12 @@ ul.plain li:first-child { border-top: 0; }
 .tabulator .tabulator-header .tabulator-col .tabulator-header-filter input { font: inherit; font-size: 13px; font-weight: 400;
   text-transform: none; letter-spacing: 0; padding: 6px 8px; border: 1px solid var(--line-strong); border-radius: 8px;
   background: var(--bg); color: var(--fg); width: 100%; box-sizing: border-box; }
+
+/* preliminary results: figure of the manuscript and its tables */
+.figcard { padding: 22px; }
+.figcard a.fig { display: block; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.figcard a.fig img { display: block; width: 100%; height: auto; }
+.figcard .figlegend { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin: 16px 2px 0; }
+.figcard .figlegend b { color: var(--fg); font-weight: 600; }
+.tablewrap { overflow-x: auto; }
+.card + .card.stack, .grid2 + .card.stack, .card.stack + .grid2 { margin-top: 20px; }

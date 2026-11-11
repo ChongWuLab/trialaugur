@@ -66,6 +66,9 @@ const pct1 = (a, b) => `${((100 * a) / b).toFixed(1)}%`;
           <div>${S.name} · data cut ${fmtDate(S.snapshotDate)} · forecasts recorded before outcome disclosure</div>
           <div>Research resource only. Not medical, clinical or investment advice.</div>
         </div>
+        <div class="lic">The contents of this site are available under a
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener license">Creative Commons Attribution-NonCommercial 4.0 International licence (CC BY-NC 4.0)</a>.
+          Commercial use is not permitted.</div>
       </div></footer>`;
   }
 

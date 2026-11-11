@@ -251,6 +251,7 @@ details.proof .body table.t { margin: 10px 0; }
 footer.foot { margin-top: 96px; border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
 footer.foot .row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 footer.foot a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--line-strong); }
+footer.foot .lic { margin-top: 12px; line-height: 1.55; }
 
 /* ---------- results page: section nav, card titles, legends ---------- */
 .subnav { position: sticky; top: 68px; z-index: 15; background: rgba(245, 243, 236, .95);

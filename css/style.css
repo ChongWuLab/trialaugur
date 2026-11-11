@@ -379,6 +379,7 @@ ul.plain li:first-child { border-top: 0; }
 .prnum .l { font-size: 14px; color: var(--muted); margin-top: 8px; }
 .prfig { display: block; overflow-x: auto; }
 .prfig img { display: block; width: 100%; height: auto; }
+.prfig.second { margin-top: 34px; }
 @media (max-width: 760px) {
   .prsec { padding-top: 22px; }
   .card.pr { padding: 24px 20px 26px; }

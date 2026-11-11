@@ -14,7 +14,7 @@ window.SITE = {
 
   // Public origin of this deployment (no trailing slash). Used only for the
   // citation box and canonical links — all internal links are relative.
-  baseUrl: "https://chongwulab.github.io/trialaugur",
+  baseUrl: "https://trialoutlook.com",
 
   // GitHub repository of this site (submissions and issues go here).
   repoUrl: "https://github.com/ChongWuLab/trialaugur",
